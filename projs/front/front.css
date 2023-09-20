@@ -1,0 +1,399 @@
+/*
+// Nonprofit Chief Executive Officer 
+webpack-dev-server --watch-content-base --open
+npm install -D webpack webpack-cli webpack-dev-server*/
+:root {
+    --primary-color: #3498db;
+    --accent-color: #FFA500;
+    --background-color: #ffffff;
+    --text-color: #333333;
+  }
+  
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      html {
+        font-size: 62.5%;
+      }
+      
+      body {
+        height: 100vh;
+        font: 1.6rem "Helvetica", sans-serif;
+        margin: 0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+      .grid-container {
+        display: grid;
+        grid-template-areas: 'header' 'main' 'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 1fr 5rem;
+        height: 100%;
+    }
+      /* Header */
+      header {
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+      }
+      
+      header a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      button {
+        font-size: 1.6rem;
+        padding: 1rem;
+        border: 0.1rem solid var(--primary-color);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        background-color: var(--primary-color);
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      button.primary {
+        background-color: var(--primary-color);
+      }
+      
+      button:hover {
+        background-color: var(--accent-color);
+      }
+      
+  
+.fw{
+    width: 100%;
+}
+button:hover{
+    background-color:  #FFA500 ;
+}
+
+header a:hover {
+    color: var(--accent-color);
+    transition: background-color 0.6s ease-in-out;
+}
+
+
+.name a {
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.other a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+    font-weight: lighter;
+    font-size: 0.01rem;
+}
+
+.info {
+    color: white;
+    font-weight: lighter;
+    font-size: 0.01rem;
+    justify-content: center;
+}
+
+
+.donations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .donations li {
+    flex: 0 1 25rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    height: 30rem;
+    background-color: white;
+    text-align: left;
+    border-radius: 5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .donations li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .donations img {
+    max-height: 18rem;
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: 5%;
+  }
+  
+  .donation-name a {
+    font-size: 2.2rem;
+    justify-content: left;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .donation-name a:hover {
+    color: var(--accent-color);
+  }
+  
+  .donation-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .donation-price:hover {
+    color: var(--accent-color);
+  }
+  
+  .donation-sum {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: lightslategray;
+  }
+  
+.content{
+    padding: 1rem;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+.details-image {
+flex: 2 1 60rem;
+
+}
+.details-image img { 
+ max-width: 60rem;
+ width:100%; 
+
+}
+.details-info, 
+.details-action {
+    flex: 1 1 30rem; 
+}
+.details-info ul,
+.details-action ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.details-info h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.details-info li,
+.details-action li{
+    margin-bottom: 1rem;
+}
+.details-action {
+    border:0.1rem #808080 solid;
+    border-radius: 0.5rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+/* Donations Screen */
+.don-list {
+    flex: 3 1 60rem;
+  }
+  
+  .don-action {
+    flex: 1 2 20rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .don-list-container {
+    padding: 1rem;
+    list-style-type: none;
+  }
+  
+  .don-list-container li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--primary-color);
+  }
+  
+  .don-list-container img {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+  
+  .don-list-container li:first-child {
+    align-items: flex-end;
+  }
+  
+  .don-image {
+    flex: 1 1;
+  }
+  
+  .don-name {
+    flex: 8 1;
+  }
+  
+  .don-price {
+    flex: 1 1;
+    text-align: right;
+  }
+  
+  .don-name > div {
+    padding: 1rem;
+  }
+  
+  .don-list h3 {
+    margin: 0;
+  }
+  
+  .don-list button,
+  .don-list select {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .delete-button {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .don-name a {
+    color: var(--text-color);
+   
+  }
+  
+  
+  
+  .qty-select {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+
+  
+  /* Add more styles as needed */
+  /* About Container */
+.about-container {
+    position: relative;
+  }
+  
+  
+  
+  .about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f8f8f8; /* Changed background color */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure proper stacking */
+    z-index: 1; /* Place the content above the background */
+  }
+  
+  .about-me h2 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 20px; /* Added margin bottom */
+  }
+  
+  .about-me a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .about-me a:hover {
+    color: #0056b3;
+  }
+  
+    
+  /* Add your CSS styles here */
+.creator {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .creator h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .creator p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+  }
+  
+  .creator img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 600px) {
+    .creator {
+      padding: 10px;
+    }
+  
+    .creator h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .creator p {
+      font-size: 14px;
+    }
+  }
+  

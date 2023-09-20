@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="front.css" />
+    <title>Feed The Hindus Of Pakistan</title>
+    <!-- Include the PayPal Smart Payment Buttons script with your client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac96JeDExzkCKa0iDT8O1HkLjpw7gsaDi31SWxabxMLXrgTRDmyyJKS1D5QCUFchcapkWKBOEqjNxDcw"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <div class="name">
+                <a href="/#/">Feed The Hindus Of Pakistan</a>
+            </div>
+            <div class="other">
+                <a href="/#/creator">Nonprofit Chief Executive Officer</a>
+                <a href="/#/about">About</a>
+                <a href="/#/donations">Donations</a>
+            </div>
+        </header>
+        <main id="main-container"></main>
+        <footer>
+            <p class="copyright">
+                All Rights Reserved @<span id="currentYear"></span>
+            </p>
+            <p class="info">
+            </p>
+            <script>
+                var date = new Date();
+                var year = date.getFullYear();
+                document.getElementById("currentYear").innerHTML = year;
+            </script>
+        </footer>
+    </div>
+    <!-- Include your main JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
